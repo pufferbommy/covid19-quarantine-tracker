@@ -3,6 +3,7 @@ import DateContext from '../context/DateContext'
 import { useContext } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faVirus } from '@fortawesome/free-solid-svg-icons'
+import { motion } from 'framer-motion'
 
 const today = { color: '#EC4899' },
   caption = { color: '#EC4899' }
@@ -12,7 +13,9 @@ const Picker = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <FontAwesomeIcon className="text-pink-500 text-[10rem]" icon={faVirus} />
+      <motion.div animate={{ y: 0, opacity: 1 }} initial={{ y: -25, opacity: 0 }}>
+        <FontAwesomeIcon className="text-pink-500 text-[10rem]" icon={faVirus} />
+      </motion.div>
       <h1 className="text-3xl text-center mt-8 font-bold">
         คุณเริ่มกักตัวตั้งแต่วันไหน?
       </h1>

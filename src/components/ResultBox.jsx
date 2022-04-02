@@ -7,7 +7,7 @@ const ResultBox = ({ icon, title, subtitle, btnStyles }) => {
 
   return (
     <div className="flex px-4 flex-col items-center">
-      <motion.div animate={{ y: 0 }} initial={{ y: -25 }}>
+      <motion.div animate={{ y: 0, opacity: 1 }} initial={{ y: -25, opacity: 0 }}>
         {icon}
       </motion.div>
       <h2 className="text-4xl md:text-3xl leading-normal text-center mt-8 font-bold">
