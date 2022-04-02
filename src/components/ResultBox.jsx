@@ -1,15 +1,7 @@
 import { useContext } from 'react'
 import DateContext from '../context/DateContext'
 
-const defaultClassNameBtn =
-  'bg-pink-500 hover:bg-pink-400 mt-4 md:mt-2 text-white p-3 md:p-2 rounded-lg text-lg md:text-base transition duration-300 ease-in-out'
-
-const ResultBox = ({
-  icon,
-  title,
-  subtitle,
-  classNameBtn = defaultClassNameBtn,
-}) => {
+const ResultBox = ({ icon, title, subtitle, btnStyles }) => {
   const { clearSelectedDate } = useContext(DateContext)
 
   return (
@@ -19,11 +11,9 @@ const ResultBox = ({
         {title}
       </h2>
       {subtitle && (
-        <h3 className="mt-4 md:mt-2 text-center text-xl md:text-lg">
-          {subtitle}
-        </h3>
+        <h3 className="mt-4 md:mt-2 text-center text-xl md:text-lg">{subtitle}</h3>
       )}
-      <button onClick={clearSelectedDate} className={classNameBtn}>
+      <button onClick={clearSelectedDate} className={`${btnStyles} button`}>
         เปลี่ยนแปลงวันที่เริ่มกักตัว
       </button>
     </div>

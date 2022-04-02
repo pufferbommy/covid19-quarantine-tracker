@@ -7,9 +7,7 @@ const App = () => {
   const { selectedDate } = useContext(DateContext)
 
   useEffect(() => {
-    if (selectedDate) {
-      localStorage.setItem('selectedDate', selectedDate)
-    }
+    selectedDate && localStorage.setItem('selectedDate', selectedDate)
   }, [selectedDate])
 
   return (

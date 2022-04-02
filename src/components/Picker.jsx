@@ -1,16 +1,18 @@
 import { DayPicker } from 'react-day-picker'
 import DateContext from '../context/DateContext'
 import { useContext } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faVirus } from '@fortawesome/free-solid-svg-icons'
 
-const today = { color: 'rgb(236 72 153)' }
-const caption = { color: 'rgb(236 72 153)' }
+const today = { color: '#EC4899' }
+const caption = { color: '#EC4899' }
 
 const Picker = () => {
   const { selectedDate, setSelectedDate } = useContext(DateContext)
 
   return (
     <div className="flex flex-col items-center">
-      <i className="fa-solid fa-viruses text-pink-500 text-[10rem]" />
+      <FontAwesomeIcon className="text-pink-500 text-[10rem]" icon={faVirus} />
       <h1 className="text-3xl text-center mt-8 md:mt-4 font-bold">
         คุณเริ่มกักตัวตั้งแต่วันไหน?
       </h1>
