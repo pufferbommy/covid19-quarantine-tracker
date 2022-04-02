@@ -4,8 +4,8 @@ import { useContext } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faVirus } from '@fortawesome/free-solid-svg-icons'
 
-const today = { color: '#EC4899' }
-const caption = { color: '#EC4899' }
+const today = { color: '#EC4899' },
+  caption = { color: '#EC4899' }
 
 const Picker = () => {
   const { selectedDate, setSelectedDate } = useContext(DateContext)
@@ -13,10 +13,10 @@ const Picker = () => {
   return (
     <div className="flex flex-col items-center">
       <FontAwesomeIcon className="text-pink-500 text-[10rem]" icon={faVirus} />
-      <h1 className="text-3xl text-center mt-8 md:mt-4 font-bold">
+      <h1 className="text-3xl text-center mt-8 font-bold">
         คุณเริ่มกักตัวตั้งแต่วันไหน?
       </h1>
-      <div className="mt-2 md:mt-0">
+      <div className="mt-2">
         <DayPicker
           showOutsideDays
           modifiersStyles={{ today }}

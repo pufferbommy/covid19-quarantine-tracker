@@ -33,7 +33,7 @@ const Result = () => {
           />
         }
         title="นี่คือวันในอนาคต!"
-        btnStyles="bg-purple-500 hover:bg-purple-400"
+        btnStyles="bg-purple-500 hover:bg-purple-400 ring-purple-300"
       />
     )
   }
@@ -47,9 +47,9 @@ const Result = () => {
             icon={faHouseChimney}
           />
         }
-        title={`คุณกักตัวครบวันที่กำหนดแล้ว!`}
+        title="คุณกักตัวครบวันที่กำหนดแล้ว!"
         subtitle="หายป่วยแล้ว ดูแลสุขภาพด้วยนะ"
-        btnStyles="bg-green-500 hover:bg-green-400"
+        btnStyles="bg-green-500 hover:bg-green-400 ring-green-300"
       />
     )
   }
@@ -59,11 +59,11 @@ const Result = () => {
       icon={
         <FontAwesomeIcon className="text-[10rem] text-pink-500" icon={faHouse} />
       }
-      title={`เหลืออีก ${targetDay?.toString()} วันจะครบเวลากักตัว`}
+      title={`เหลืออีก ${targetDay} วันจะครบเวลากักตัว`}
       subtitle={`วันที่ ${format(targetDate, 'd MMM yyyy', {
         locale: th,
       })} คุณจะเป็นอิสระแล้ว!`}
-      btnStyles="bg-pink-500 hover:bg-pink-400"
+      btnStyles="bg-pink-500 hover:bg-pink-400 ring-pink-300"
     />
   )
 }
